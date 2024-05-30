@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "push": "drizzle-kit push",
+    "pull": "drizzle-kit introspect",
+    "upgrade": "drizzle-kit up",
+    "studio": "drizzle-kit studio --port 4100 --verbose",
+    "generate-nuxt": "nuxt generate",
+    "generate": "drizzle-kit generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "dbgeherate": "drizzle-kit generate:pg"
+  },
+  "dependencies": {
+    "@nuxthub/core": "^0.5.18",
+    "@nuxtjs/auth-next": "5.0.0-1667386184.dfbbb54",
+    "@nuxtjs/axios": "^5.13.6",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "4.3.1",
+    "drizzle-orm": "^0.30.10",
+    "drizzle-zod": "^0.5.1",
+    "nuxt": "^3.11.2",
+    "pg": "^8.11.5",
+    "postgres": "^3.4.4",
+    "primevue": "^3.52.0",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.17.3",
+    "@nuxt/typescript-build": "^3.0.2",
+    "@types/node": "^20.12.13",
+    "@types/pg": "^8.11.6",
+    "consola": "^3.2.3",
+    "drizzle-kit": "^0.21.4",
+    "nuxt-primevue": "^3.0.0",
+    "sass": "1.56.2",
+    "sass-loader": "10.1.1",
+    "typescript": "^5.4.5",
+    "wrangler": "^3.57.2"
+  }
+}
