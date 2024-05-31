@@ -12,8 +12,7 @@
     "generate-nuxt": "nuxt generate",
     "generate": "drizzle-kit generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "dbgeherate": "drizzle-kit generate:pg"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxthub/core": "^0.5.18",

@@ -1,14 +1,18 @@
 <template>
   <div>
-    This is your Profile
+    <p>Profile Page</p>
   </div>
 </template>
 
-<script lang="ts">
-  // export default {
-  //   name:"profile",
-  //   middleware: 'auth',
-  // }
+<script>
+  export default{
+    beforeMount(){
+      definePageMeta({
+        middleware: 'auth',
+      })     
+    }
+  }
+  
 </script>
 
 <style>
