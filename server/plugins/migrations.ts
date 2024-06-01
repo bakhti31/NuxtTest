@@ -1,5 +1,5 @@
 import consola from "consola"
-import { migrate } from "drizzle-orm/d1/migrator"
+import { migrate } from "drizzle-orm/postgres-js/migrator"
 import { useDrizzle } from "../util/drizzle"
 
 export default defineNitroPlugin(async() => {

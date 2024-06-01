@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "consola",
+        "DATABASEURL",
         "Ganbatte",
         "nocheck",
         "Nuxt",
@@ -8,5 +9,18 @@
         "nuxtjs",
         "popperjs",
         "primevue"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "NuxtJS",
+            "group": "NuxtJS",
+            "database": "jir",
+            "username": "postgres",
+            "password": "psql"
+        }
     ]
 }
