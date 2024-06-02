@@ -29,10 +29,16 @@ export default{
       // console.log(body);
       if(body){
         this.$router.push('/profile')
+      }else{
+        alert('Username or Password Wrong')
       }
     }
   }
 }
+definePageMeta({
+  middleware: "auth",
+  layout: 'custom',
+})
 </script>
 
 <style>

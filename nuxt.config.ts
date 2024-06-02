@@ -27,16 +27,11 @@ export default defineNuxtConfig({
   },
   hub: {
     database:true,
-    // remote:true,
   },
   nitro: {
     experimental:{
-      // openAPI: true,
+      openAPI: true,
       // tasks : true
     }
   },
-  plugins:[
-    // '~/server/plugins/db.ts',
-  ]
-    
 });

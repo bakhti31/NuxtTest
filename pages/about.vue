@@ -8,9 +8,10 @@
 export default{
     name: "about",
 }
-// definePageMeta({
-//     layout:"custom"
-// })
+definePageMeta({
+    layout:"custom",
+    middleware: 'auth'
+})
 </script>
 
 <style>

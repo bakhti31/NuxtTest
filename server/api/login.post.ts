@@ -1,8 +1,21 @@
+import { employees } from "../database/schema/employee/schema";
+import { eq, db } from "../util/drizzle";
+
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
-  if(body.username == 'admin' && body.password == 'admin'){
-    setCookie(event, 'auth', 'true')
-    return true;
+  // const body = JSON.parse(await readBody(event));
+  const body = await readBody(event); 
+  const username = body.username;
+  console.log(username)
+  if (username){
+    const [data] = await db.select().from(employees).where(eq(employees.name,username));
+    if(!data) return false;
+    setCookie(event,'auth',data.name);
+    return data;
   }
   return false;
+  // if(body.username == 'admin' && body.password == 'admin'){
+  //   setCookie(event, 'auth', 'true')
+  //   return true;
+  // }
+  // return false;
 })

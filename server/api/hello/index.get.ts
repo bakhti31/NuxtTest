@@ -1,5 +1,6 @@
-import { tables, useDrizzle } from "~/server/util/drizzle"
+import { employees } from "~/server/database/schema/employee/schema";
+import { db } from "~/server/util/drizzle"
 export default eventHandler(async () => {
-  const test = await useDrizzle().select().from(tables.employeesInHr);
+  const test = await db.select().from(employees);
   return  test
 })
