@@ -1,8 +1,8 @@
-import { employees } from "../database/schema/employee/schema";
+import { employees } from "./employee/schema";
 import { eq, db } from "../util/drizzle";
 
 export default defineEventHandler(async (event) => {
-  // const body = JSON.parse(await readBody(event));
+  // const body = JSON.parse(await readBody(event)); // Kalau dari Bentuk json
   const body = await readBody(event); 
   const username = body.username;
   console.log(username)

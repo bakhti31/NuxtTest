@@ -1,9 +1,9 @@
 <template>
   <div>
     <p>Login Page</p>
-    <PrimeInputText type="text" v-model="username"/>
-    <PrimeInputText type="password" v-model="password"/>
-    <PrimeButton label="Login" @click="login"/>
+    <InputText type="text" v-model="username"/>
+    <InputText type="password" v-model="password"/>
+    <Button label="Login" @click="login"/>
   </div>
 </template>
 

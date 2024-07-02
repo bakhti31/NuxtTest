@@ -12,11 +12,15 @@ export default defineNuxtConfig({
     usePrimeVue:true,
     cssLayerOrder: 'reset,primevue',
     components : {
-      prefix : 'Prime',
+      // prefix : 'Prime',
       exclude: [],
     }
   },
-  css: ['primevue/resources/themes/aura-dark-indigo/theme.css'],
+  css: [
+    'primevue/resources/themes/aura-dark-indigo/theme.css',
+    'primevue/resources/primevue.min.css',
+    "primeicons/primeicons.css",
+  ],
   vite:{
     vue:{
       customElement: true

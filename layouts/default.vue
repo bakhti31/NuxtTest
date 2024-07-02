@@ -1,9 +1,10 @@
 <template>
-  <PrimeMenubar :model="items"/>
+  <Menubar :model="items"/>
   <slot/>
 </template>
 
 <script lang="ts">
+
 export default{
   data(){
     const cookie = useCookie('auth');
@@ -11,6 +12,7 @@ export default{
         {label: 'Home', url: '/'},
         {label: 'About', url: '/about/'},
         {label: 'Profile', url: '/profile/'},
+        {label: 'Employee', url: '/employee/'},
     ];
     if (cookie.value != null){
       menu.push({label: 'Logout', url: '/logout/'});

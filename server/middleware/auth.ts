@@ -6,15 +6,20 @@ export default defineEventHandler(async (event) => {
     event.context.authorization = true
   }else{
     event.context.authorization = false
-    if(getRequestURL(event).pathname != '/api/**' as any){
+
+    if(event.path == '/api/login' as any && event.method == 'POST'){
+      console.log("login")
       return ;
-    }else if(event.path != '/api/login' as any && event.method == 'POST'){
+    }else if(getRequestURL(event).pathname.includes('/api/') === true){
+      throw createError({
+        statusCode: 401,
+        statusMessage: 'Unauthorized',
+      })
+    }else {
       return ;
     }
-    // return navigateTo('/login');
-    throw createError({
-      statusCode: 401,
-      statusMessage: 'Unauthorized',
-    })
+    // return false;
+    
+    
   }
 })

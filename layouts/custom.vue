@@ -1,6 +1,7 @@
 <template>
-    <div class="header">
-        Custom Header
-    </div>
+    Custom
+        <nuxt-link to="/login">
+            Login
+        </nuxt-link>
     <slot/>
 </template>

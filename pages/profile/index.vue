@@ -1,6 +1,10 @@
 <template>
   <div>
     <p>Profile Page</p>
+    <PrimeCard>
+      <PrimeImage src="" alt=""/>
+      
+    </PrimeCard>
   </div>
 </template>
 
